@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Codemy Ecommerce</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="{% static "assets/favicon.ico" %}" />
+    <!-- Bootstrap icons-->
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static "css/output.css" %}" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation-->
+    {% include "./partials/_navbar.html" %}
+    <!-- Tailwindcss Toast Messages -->
+    <section class="absolute top-2 right-5 shadow-sm">
+      {% include "./partials/_messages.html" %}
+    </section>
+    <!-- Section-->
+    <main class="py-5">
+      {% block content %}
+      {% endblock content %}
+    </main>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p>
+      </div>
+    </footer>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

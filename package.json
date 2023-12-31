@@ -1,0 +1,26 @@
+{
+  "name": "django-coding-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i static\\css\\input.css -o static\\css\\output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/somukhan9/django-coding-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/somukhan9/django-coding-test/issues"
+  },
+  "homepage": "https://github.com/somukhan9/django-coding-test#readme",
+  "devDependencies": {
+    "prettier": "^3.1.1",
+    "prettier-plugin-tailwindcss": "^0.5.10",
+    "tailwindcss": "^3.4.0"
+  }
+}

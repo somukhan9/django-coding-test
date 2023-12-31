@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.auth-btn {
+  @apply rounded-md px-5 py-2 transition-all duration-200 ease-in-out hover:bg-black hover:text-white;
+}
+
+.form-control {
+  @apply w-full rounded-md p-2 outline-none ring-1 ring-offset-indigo-600 focus:ring-4;
+}
