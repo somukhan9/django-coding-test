@@ -1,0 +1,28 @@
+<nav class="flex items-center justify-between py-5 px-10 border-b-2 shadow-md">
+  <div class="max-w-5xl w-full flex items-center justify-between gap-4">
+    <a class="font-bold text-4xl tracking-wide"
+       href="{% url "tasks:home" %}">Task Manager</a>
+    <div class="flex items-center gap-2">
+      <ul class="flex items-center gap-2">
+        <li class="px-4">
+          <a class="hover:text-slate-700 {% if request.path == '/' %}text-red-700{% endif %} "
+             href="{% url "tasks:home" %}">Home</a>
+        </li>
+        <li class="px-4">
+          <a class="hover:text-slate-700" href="#!">About</a>
+        </li>
+        <div class="flex items-center gap-2">
+          {% if request.user.is_authenticated %}
+            <a class="auth-btn text-white bg-black"
+               href="{% url "authapp:logout" %}">Logout</a>
+          {% else %}
+            <a class="auth-btn {% if request.path == '/auth/login/' %}text-white bg-black {% else %} text-black bg-white{% endif %}"
+               href="{% url "authapp:login" %}">Login</a>
+            <a class="auth-btn {% if request.path == '/auth/register/' %}text-white bg-black {% else %} text-black bg-white{% endif %}"
+               href="{% url "authapp:register" %}">Register</a>
+          {% endif %}
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>

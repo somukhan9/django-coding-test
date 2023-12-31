@@ -138,4 +138,6 @@ GitHub.sublime-settings
 .history
 .vscode
 
+node_modules
+
 .requirements.txt
